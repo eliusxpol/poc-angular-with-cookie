@@ -1,2 +1,24 @@
-<h1>Ibrahima</h1>
+<nav>
+  <div>
+    <a href="/">HTTP Only Cookie</a>
+    <div>
+      <ul>
+        <li>
+          <a active routerLink="/">Home</a>
+        </li>
+        <li *ngIf="!userInfo">
+          <a routerLink="/login">Login</a>
+        </li>
+        <li *ngIf="userInfo">
+          <a routerLink="/dashboard">Dashboard</a>
+        </li>
+      </ul>
+      <ul>
+        <li *ngIf="userInfo">
+          <a active> {{ userInfo.fullName }} </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 <router-outlet></router-outlet>

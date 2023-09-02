@@ -1,0 +1,29 @@
+<div>
+  <div>
+    <div>
+      <form method="POST">
+        <legend>Login</legend>
+        <div>
+          <label for="txtName">Email</label>
+          <input
+            type="text"
+            [(ngModel)]="loginUser.email"
+            name="email"
+            id="txtName"
+          />
+        </div>
+        <div>
+          <label for="txtCost">Password</label>
+          <input
+            type="password"
+            [(ngModel)]="loginUser.password"
+            name="password"
+            id="txtCost"
+          />
+        </div>
+
+        <button type="button" (click)="login()">Login</button>
+      </form>
+    </div>
+  </div>
+</div>
